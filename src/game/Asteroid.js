@@ -12,6 +12,7 @@ export default class {
         this.asteroid.position.y = 0;
         app.ticker.add((delta) => {
             this.asteroid.position.y += this.asteroidSpeed * delta;
+            this.asteroid.rotation += 0.1 * delta;
         });
         app.stage.addChild(this.asteroid);
     }
